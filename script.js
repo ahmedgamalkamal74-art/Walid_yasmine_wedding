@@ -34,18 +34,21 @@ const openInvitation = document.getElementById("openInvitation");
 const welcomeScreen = document.getElementById("welcomeScreen");
 const musicBtn = document.getElementById("musicBtn");
 
-openInvitation.addEventListener("click", function () {
+if (openInvitation) {
+if (openInvitation) {
+  openInvitation.addEventListener("click", function () {
 
-  music.play().then(() => {
-    if (musicBtn) {
-      musicBtn.innerHTML = "♫ <span>إيقاف الموسيقى</span>";
-    }
+    music.play().then(() => {
+      if (musicBtn) {
+        musicBtn.innerHTML = "♫ <span>إيقاف الموسيقى</span>";
+      }
+    });
+
+    welcomeScreen.classList.add("hide");
+
+    setTimeout(startAutoScroll, 1500);
   });
-
-  welcomeScreen.classList.add("hide");
-
-  setTimeout(startAutoScroll, 1500);
-});
+}
 
 
 // 🎵 زر الموسيقى
