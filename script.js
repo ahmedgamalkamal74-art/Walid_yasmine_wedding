@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 const weddingDate = new Date("2026-09-13T21:00:00+03:00").getTime();
 
 function updateCountdown(){
@@ -129,3 +130,4 @@ function stopAutoScroll(){
 
 window.addEventListener("wheel", stopAutoScroll, {passive:true});
 window.addEventListener("touchmove", stopAutoScroll, {passive:true});
+  });
