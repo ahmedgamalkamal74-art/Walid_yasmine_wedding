@@ -386,3 +386,141 @@ h2 {
   font-family: Amiri, serif;
   font-size: 48px;
   margin: 25px 0 
+  /* =========================================
+   WALID & YASMINE - WELCOME SCREEN
+   ========================================= */
+
+.hero {
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #17110d;
+}
+
+/* صورة الخلفية */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('wedding-atmosphere.png');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.04);
+    filter: brightness(0.58) saturate(0.75);
+}
+
+/* طبقة فوق الصورة */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(20, 14, 10, 0.55) 0%,
+            rgba(20, 14, 10, 0.20) 40%,
+            rgba(20, 14, 10, 0.78) 100%
+        );
+}
+
+/* المحتوى */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(90%, 700px);
+    text-align: center;
+    color: #fffaf1;
+    padding: 40px 20px;
+    
+    animation: welcomeFade 1.5s ease forwards;
+}
+
+/* أسماء العروسين */
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(18px, 4vw, 30px);
+    font-weight: 400;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    margin: 0 0 55px;
+    color: #ead4ad;
+    
+    text-shadow: 0 3px 20px rgba(0,0,0,.5);
+}
+
+/* علامة & */
+.hero .amp {
+    display: none;
+}
+
+/* إخفاء الآية في الصفحة الأولى */
+.hero .verse {
+    display: none;
+}
+
+/* العنوان الرئيسي */
+.hero .invite {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(31px, 7vw, 62px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 auto 24px;
+    color: #fffaf1;
+    
+    text-shadow: 0 5px 30px rgba(0,0,0,.65);
+}
+
+/* لو عايز celebration بشكل مميز */
+.hero .invite::first-line {
+    letter-spacing: 5px;
+}
+
+/* الجملة الصغيرة */
+.hero-content::after {
+    content: "Tap to enter and enjoy the music";
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: rgba(255,250,241,.82);
+    margin-top: 30px;
+}
+
+/* زر الدخول */
+.hero .scroll {
+    width: auto;
+    height: auto;
+    min-width: 210px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 35px;
+    padding: 15px 28px;
+    
+    border: 1px solid rgba(234,212,173,.75);
+    border-radius: 50px;
+    
+    background: rgba(30,20,14,.38);
+    backdrop-filter: blur(8px);
+    
+    color: #fffaf1;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+    
+    animation: buttonPulse 2.5s ease-in-out infinite;
+}
+
+/* استبدال علامة السهم بكلمة ENTER */
+.hero .scroll
