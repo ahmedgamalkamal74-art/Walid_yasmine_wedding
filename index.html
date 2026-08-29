@@ -1,98 +1,312 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="theme-color" content="#201913">
   <meta name="description" content="دعوة زفاف وليد الشيمي وياسمين الصاوي">
+
   <title>وليد & ياسمين | دعوة الزفاف</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="music-pill" id="musicPill" aria-label="تشغيل الموسيقى">
-    <button id="musicBtn" type="button">♫ <span>تشغيل الموسيقى</span></button>
-  </div>
 
-  <main>
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content reveal">
-        <p class="verse">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾</p>
-        <div class="ornament">✦</div>
-        <h1>وليد الشيمي</h1>
-        <div class="amp">&amp;</div>
-        <h1>ياسمين الصاوي</h1>
-        <p class="invite">بكل الحب والسعادة<br>ندعوكم لمشاركتنا فرحتنا في يوم زفافنا</p>
-        <a class="scroll" href="#details">⌄</a>
-      </div>
-    </section>
-
-    <section class="countdown section-dark" id="countdownSection">
-      <div class="container">
-        <p class="eyebrow">♥ العد التنازلي للفرح ♥</p>
-        <div class="timer" id="timer">
-          <div><strong id="days">--</strong><span>يوم</span></div>
-          <div><strong id="hours">--</strong><span>ساعة</span></div>
-          <div><strong id="minutes">--</strong><span>دقيقة</span></div>
-          <div><strong id="seconds">--</strong><span>ثانية</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="details" id="details">
-      <div class="container reveal">
-        <p class="eyebrow">مــوعــدنــا</p>
-        <h2>ليلة من العمر</h2>
-        <div class="details-grid">
-          <article class="detail-card">
-            <div class="icon">◷</div>
-            <h3>الساعة</h3>
-            <p>9:00 مساءً</p>
-          </article>
-          <article class="detail-card">
-            <div class="icon">▣</div>
-            <h3>التاريخ</h3>
-            <p>الأحد<br>13 سبتمبر 2026</p>
-          </article>
-          <article class="detail-card">
-            <div class="icon">⌖</div>
-            <h3>المكان</h3>
-            <p>Lavendola<br>فندق طيبة روز<br>التجمع الخامس</p>
-          </article>
-        </div>
-        <a class="map-btn" target="_blank" rel="noopener"
-           href="https://www.google.com/maps/search/?api=1&query=Lavendola%20Tiba%20Rose%20Hotel%20New%20Cairo">
-          فتح موقع القاعة <span>⌖</span>
-        </a>
-      </div>
-    </section>
-
-    
-
-    <section class="closing">
-      <div class="container reveal">
-        <div class="heart">♥</div>
-        <h2>وجودكم يكمل فرحتنا</h2>
-        <p>ننتظركم لنحتفل سويًا بأجمل ليلة في حياتنا</p>
-        <div class="names">وليد &amp; ياسمين</div>
-        <div class="line"></div>
-        <p class="small">13 • 09 • 2026</p>
-      </div>
-    </section>
-  </main>
-
-  
+  <!-- =========================
+       شاشة البداية
+  ========================== -->
 
   <div id="welcomeScreen">
-  <div class="welcome-content">
-    <h1>Walid &amp; Yasmin</h1>
-    <p>Welcome to our celebration</p>
-    <span>Tap to enter and enjoy the music</span>
 
-    <button id="openInvitation" type="button"
-      onclick="document.getElementById('welcomeScreen').classList.add('hide')">
-      Enter Celebration
+    <div class="welcome-content">
+
+      <h1>وليد &amp; ياسمين</h1>
+
+      <p>دعوة زفاف</p>
+
+      <span>يسعدنا حضوركم ومشاركتنا فرحتنا</span>
+
+      <button id="openInvitation" type="button">
+        دخول الدعوة
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       زر الموسيقى
+  ========================== -->
+
+  <div class="music-pill" id="musicPill" aria-label="تشغيل الموسيقى">
+
+    <button id="musicBtn" type="button">
+      ♫ <span>تشغيل الموسيقى</span>
     </button>
+
   </div>
-  </div>
+
+
+  <!-- =========================
+       الدعوة
+  ========================== -->
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-bg"></div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content reveal">
+
+        <p class="verse">
+          ﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ
+          أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم
+          مَّوَدَّةً وَرَحْمَةً ﴾
+        </p>
+
+        <div class="ornament">✦</div>
+
+        <h1>وليد الشيمي</h1>
+
+        <div class="amp">&amp;</div>
+
+        <h1>ياسمين الصاوي</h1>
+
+        <p class="invite">
+          بكل الحب والسعادة
+          <br>
+          ندعوكم لمشاركتنا فرحتنا في يوم زفافنا
+        </p>
+
+        <a class="scroll" href="#details">
+          ⌄
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- COUNTDOWN -->
+
+    <section class="countdown section-dark" id="countdownSection">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          ♥ العد التنازلي للفرح ♥
+        </p>
+
+        <div class="timer" id="timer">
+
+          <div>
+            <strong id="days">--</strong>
+            <span>يوم</span>
+          </div>
+
+          <div>
+            <strong id="hours">--</strong>
+            <span>ساعة</span>
+          </div>
+
+          <div>
+            <strong id="minutes">--</strong>
+            <span>دقيقة</span>
+          </div>
+
+          <div>
+            <strong id="seconds">--</strong>
+            <span>ثانية</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DETAILS -->
+
+    <section class="details" id="details">
+
+      <div class="container reveal">
+
+        <p class="eyebrow">
+          مــوعــدنــا
+        </p>
+
+        <h2>
+          ليلة من العمر
+        </h2>
+
+
+        <div class="details-grid">
+
+          <!-- الوقت -->
+
+          <article class="detail-card">
+
+            <div class="icon">
+              ◷
+            </div>
+
+            <h3>
+              الساعة
+            </h3>
+
+            <p>
+              9:00 مساءً
+            </p>
+
+          </article>
+
+
+          <!-- التاريخ -->
+
+          <article class="detail-card">
+
+            <div class="icon">
+              ▣
+            </div>
+
+            <h3>
+              التاريخ
+            </h3>
+
+            <p>
+              الأحد
+              <br>
+              13 سبتمبر 2026
+            </p>
+
+          </article>
+
+
+          <!-- المكان -->
+
+          <article class="detail-card">
+
+            <div class="icon">
+              ⌖
+            </div>
+
+            <h3>
+              المكان
+            </h3>
+
+            <p>
+              Lavendola
+              <br>
+              فندق طيبة روز
+              <br>
+              التجمع الخامس
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <!-- الخريطة -->
+
+        <a
+          class="map-btn"
+          target="_blank"
+          rel="noopener"
+          href="https://www.google.com/maps/search/?api=1&query=Lavendola%20Tiba%20Rose%20Hotel%20New%20Cairo">
+
+          فتح موقع القاعة
+
+          <span>
+            ⌖
+          </span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- CLOSING -->
+
+    <section class="closing">
+
+      <div class="container reveal">
+
+        <div class="heart">
+          ♥
+        </div>
+
+        <h2>
+          وجودكم يكمل فرحتنا
+        </h2>
+
+        <p>
+          ننتظركم لنحتفل سويًا
+          <br>
+          بأجمل ليلة في حياتنا
+        </p>
+
+        <div class="names">
+          وليد &amp; ياسمين
+        </div>
+
+        <div class="line"></div>
+
+        <p class="small">
+          13 • 09 • 2026
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       JavaScript
+  ========================== -->
+
+  <script src="script.js"></script>
+
+
+  <!-- فتح الدعوة -->
+
+  <script>
+
+    const openInvitation =
+      document.getElementById("openInvitation");
+
+    const welcomeScreen =
+      document.getElementById("welcomeScreen");
+
+    openInvitation.addEventListener("click", function () {
+
+      welcomeScreen.classList.add("hide");
+
+      setTimeout(function () {
+
+        welcomeScreen.style.display = "none";
+
+      }, 900);
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>
