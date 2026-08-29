@@ -352,50 +352,1098 @@
       }
 
       .names {
-        font-size: 17px;
-      }
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#1b1410">
+
+    <meta name="description"
+          content="WALID & YASMINE Wedding Invitation">
+
+    <title>WALID & YASMINE | Wedding Invitation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================
+           WELCOME SCREEN
+           ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #f7f0e5;
+            color: #241c16;
+            font-family: Arial, sans-serif;
+        }
+
+        /* =========================================
+           FIRST PAGE
+           ========================================= */
+
+        .welcome-screen {
+            min-height: 100svh;
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #17100c;
+        }
+
+        .welcome-background {
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                url("wedding-atmosphere.png");
+
+            background-size: cover;
+            background-position: center;
+
+            transform: scale(1.04);
+
+            filter:
+                brightness(0.55)
+                saturate(0.75);
+        }
+
+        .welcome-overlay {
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(17,11,8,0.62) 0%,
+                    rgba(17,11,8,0.18) 45%,
+                    rgba(17,11,8,0.82) 100%
+                );
+        }
+
+        .welcome-content {
+            position: relative;
+            z-index: 5;
+
+            width: min(92%, 700px);
+
+            text-align: center;
+
+            color: #fffaf2;
+
+            padding: 40px 20px;
+
+            animation:
+                welcomeAppear
+                1.4s
+                ease
+                forwards;
+        }
+
+        /* =========================================
+           NAMES
+           ========================================= */
+
+        .couple-names {
+            margin: 0 0 55px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    17px,
+                    4vw,
+                    28px
+                );
+
+            font-weight: 400;
+
+            letter-spacing: 7px;
+
+            color: #e8cfaa;
+
+            text-transform: uppercase;
+
+            text-shadow:
+                0 4px 25px
+                rgba(0,0,0,0.55);
+        }
+
+        /* =========================================
+           WELCOME
+           ========================================= */
+
+        .welcome-title {
+            margin: 0;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-weight: 400;
+
+            font-size:
+                clamp(
+                    32px,
+                    7vw,
+                    62px
+                );
+
+            line-height: 1.05;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            text-shadow:
+                0 6px 30px
+                rgba(0,0,0,0.65);
+        }
+
+        .welcome-title span {
+            display: block;
+
+            margin-top: 8px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    52px,
+                    11vw,
+                    92px
+                );
+
+            font-style: italic;
+
+            text-transform: none;
+
+            letter-spacing: 1px;
+
+            color: #e3c18d;
+        }
+
+        /* =========================================
+           SUBTITLE
+           ========================================= */
+
+        .welcome-subtitle {
+            margin: 30px 0 0;
+
+            font-family: Arial, sans-serif;
+
+            font-size:
+                clamp(
+                    11px,
+                    2.5vw,
+                    14px
+                );
+
+            letter-spacing: 2px;
+
+            color:
+                rgba(
+                    255,
+                    250,
+                    242,
+                    0.86
+                );
+        }
+
+        /* =========================================
+           ENTER BUTTON
+           ========================================= */
+
+        .enter-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 220px;
+
+            margin-top: 35px;
+
+            padding:
+                15px
+                28px;
+
+            border:
+                1px solid
+                rgba(
+                    231,
+                    207,
+                    170,
+                    0.75
+                );
+
+            border-radius: 50px;
+
+            background:
+                rgba(
+                    30,
+                    20,
+                    14,
+                    0.38
+                );
+
+            backdrop-filter: blur(8px);
+
+            color: #fffaf2;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            letter-spacing: 2.5px;
+
+            text-decoration: none;
+
+            transition:
+                0.3s ease;
+
+            box-shadow:
+                0 8px 30px
+                rgba(0,0,0,0.18);
+        }
+
+        .enter-button:hover {
+            transform: translateY(-3px);
+
+            background:
+                rgba(
+                    226,
+                    193,
+                    141,
+                    0.16
+                );
+
+            box-shadow:
+                0 12px 35px
+                rgba(0,0,0,0.35);
+        }
+
+        .enter-button:active {
+            transform: scale(0.97);
+        }
+
+        /* =========================================
+           MUSIC BUTTON
+           ========================================= */
+
+        .music-button {
+            position: fixed;
+
+            left: 18px;
+            bottom: 18px;
+
+            z-index: 100;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 48px;
+            height: 48px;
+
+            border:
+                1px solid
+                rgba(
+                    231,
+                    207,
+                    170,
+                    0.55
+                );
+
+            border-radius: 50%;
+
+            background:
+                rgba(
+                    30,
+                    20,
+                    14,
+                    0.72
+                );
+
+            backdrop-filter: blur(8px);
+
+            color: #e8cfaa;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            transition:
+                0.3s ease;
+        }
+
+        .music-button:hover {
+            transform: scale(1.08);
+        }
+
+        /* =========================================
+           MAIN CONTENT
+           ========================================= */
+
+        .main-content {
+            background: #f7f0e5;
+        }
+
+        .section-dark {
+            background: #211812;
+            color: white;
+
+            padding:
+                70px
+                20px;
+
+            text-align: center;
+        }
+
+        .container {
+            width:
+                min(
+                    1050px,
+                    92%
+                );
+
+            margin: auto;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+
+            color: #b18a55;
+
+            font-size: 15px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+        h2 {
+            margin:
+                0 0 35px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    32px,
+                    6vw,
+                    50px
+                );
+
+            font-weight: 400;
+        }
+
+        /* =========================================
+           COUNTDOWN
+           ========================================= */
+
+        .timer {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            max-width: 800px;
+
+            margin: 30px auto 0;
+        }
+
+        .timer-item {
+            padding: 10px;
+
+            border-left:
+                1px solid
+                rgba(
+                    226,
+                    193,
+                    141,
+                    0.35
+                );
+        }
+
+        .timer-item:last-child {
+            border-left: 0;
+        }
+
+        .timer-number {
+            display: block;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    34px,
+                    7vw,
+                    62px
+                );
+
+            font-weight: 400;
+
+            color: #dfbd88;
+        }
+
+        .timer-label {
+            font-size: 13px;
+
+            opacity: 0.8;
+        }
+
+        /* =========================================
+           DETAILS
+           ========================================= */
+
+        .details {
+            padding:
+                80px
+                20px;
+
+            text-align: center;
+
+            background:
+                #f7f0e5;
+        }
+
+        .details-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .detail-card {
+            padding: 28px 18px;
+
+            border:
+                1px solid
+                rgba(
+                    177,
+                    138,
+                    85,
+                    0.35
+                );
+
+            border-radius: 18px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.4
+                );
+        }
+
+        .detail-icon {
+            margin-bottom: 10px;
+
+            color: #b18a55;
+
+            font-size: 32px;
+        }
+
+        .detail-card h3 {
+            margin:
+                0 0 10px;
+
+            font-size: 18px;
+        }
+
+        .detail-card p {
+            margin: 0;
+
+            line-height: 1.9;
+        }
+
+        .map-button {
+            display: inline-flex;
+
+            margin-top: 30px;
+
+            padding:
+                14px
+                25px;
+
+            border-radius: 50px;
+
+            background: #211812;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+        }
+
+        /* =========================================
+           CLOSING
+           ========================================= */
+
+        .closing {
+            padding:
+                100px
+                20px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f7f0e5,
+                    #eee0ca
+                );
+        }
+
+        .closing-heart {
+            color: #b18a55;
+
+            font-size: 35px;
+        }
+
+        .closing-names {
+            margin-top: 20px;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    38px,
+                    8vw,
+                    60px
+                );
+
+            color: #2a211a;
+        }
+
+        /* =========================================
+           ANIMATIONS
+           ========================================= */
+
+        @keyframes welcomeAppear {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 700px) {
+
+            .welcome-content {
+                padding:
+                    30px
+                    15px;
+            }
+
+            .couple-names {
+                font-size: 16px;
+
+                letter-spacing: 5px;
+
+                margin-bottom: 50px;
+            }
+
+            .welcome-title {
+                font-size: 31px;
+
+                letter-spacing: 2px;
+            }
+
+            .welcome-title span {
+                font-size: 58px;
+            }
+
+            .welcome-subtitle {
+                font-size: 10px;
+
+                letter-spacing: 1.5px;
+            }
+
+            .enter-button {
+                min-width: 205px;
+
+                padding:
+                    14px
+                    22px;
+
+                font-size: 12px;
+            }
+
+            .timer {
+                gap: 0;
+            }
+
+            .timer-number {
+                font-size: 31px;
+            }
+
+            .timer-label {
+                font-size: 11px;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-  <main class="invitation">
 
-    <div class="names">
-      وليد & ياسمين
-    </div>
+    <!-- =========================================
+         MUSIC
+         ========================================= -->
 
-    <div class="small-line"></div>
+    <audio
+        id="weddingMusic"
+        loop
+        preload="auto">
 
-    <div class="welcome">
-      بكل الحب والسعادة
-    </div>
+        <source
+            src="audioinvite.mp3"
+            type="audio/mpeg">
 
-    <h1 class="title">
-      ندعوكم لمشاركتنا
-    </h1>
+    </audio>
 
-    <div class="subtitle">
-      فرحتنا بزفافنا
-    </div>
 
-    <p class="details">
-      حضوركم يشرفنا ويزيد فرحتنا<br>
-      ونتمنى أن تكونوا معنا في أجمل أيامنا
-    </p>
+    <!-- =========================================
+         FIRST PAGE
+         ========================================= -->
 
-    <button class="open-button" onclick="openInvitation()">
-      افتح الدعوة
+    <section
+        class="welcome-screen"
+        id="welcome">
+
+        <div
+            class="welcome-background">
+        </div>
+
+        <div
+            class="welcome-overlay">
+        </div>
+
+
+        <div
+            class="welcome-content">
+
+
+            <!-- أسماء العروسين -->
+
+            <div
+                class="couple-names">
+
+                WALID &amp; YASMINE
+
+            </div>
+
+
+            <!-- العنوان -->
+
+            <h1
+                class="welcome-title">
+
+                WELCOME TO OUR
+
+                <span>
+                    celebration
+                </span>
+
+            </h1>
+
+
+            <!-- الجملة -->
+
+            <p
+                class="welcome-subtitle">
+
+                Tap to enter and enjoy the music
+
+            </p>
+
+
+            <!-- زر الدخول -->
+
+            <a
+                href="#details"
+                class="enter-button"
+                id="enterButton">
+
+                ENTER CELEBRATION
+                &nbsp; ✦
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main
+        class="main-content">
+
+
+        <!-- COUNTDOWN -->
+
+        <section
+            class="section-dark">
+
+            <div
+                class="container">
+
+                <p class="eyebrow">
+                    ♥ THE COUNTDOWN ♥
+                </p>
+
+                <h2>
+                    Until Our Special Day
+                </h2>
+
+
+                <div
+                    class="timer">
+
+
+                    <div
+                        class="timer-item">
+
+                        <span
+                            class="timer-number"
+                            id="days">
+
+                            00
+
+                        </span>
+
+                        <span
+                            class="timer-label">
+
+                            DAYS
+
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="timer-item">
+
+                        <span
+                            class="timer-number"
+                            id="hours">
+
+                            00
+
+                        </span>
+
+                        <span
+                            class="timer-label">
+
+                            HOURS
+
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="timer-item">
+
+                        <span
+                            class="timer-number"
+                            id="minutes">
+
+                            00
+
+                        </span>
+
+                        <span
+                            class="timer-label">
+
+                            MINUTES
+
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="timer-item">
+
+                        <span
+                            class="timer-number"
+                            id="seconds">
+
+                            00
+
+                        </span>
+
+                        <span
+                            class="timer-label">
+
+                            SECONDS
+
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DETAILS -->
+
+        <section
+            class="details"
+            id="details">
+
+            <div
+                class="container">
+
+
+                <p class="eyebrow">
+                    ♥ OUR SPECIAL DAY ♥
+                </p>
+
+
+                <h2>
+                    Save The Date
+                </h2>
+
+
+                <div
+                    class="details-grid">
+
+
+                    <!-- DATE -->
+
+                    <div
+                        class="detail-card">
+
+                        <div
+                            class="detail-icon">
+
+                            ♡
+
+                        </div>
+
+                        <h3>
+                            DATE
+                        </h3>
+
+                        <p>
+                            Sunday<br>
+                            13 September 2026
+                        </p>
+
+                    </div>
+
+
+                    <!-- TIME -->
+
+                    <div
+                        class="detail-card">
+
+                        <div
+                            class="detail-icon">
+
+                            ◷
+
+                        </div>
+
+                        <h3>
+                            TIME
+                        </h3>
+
+                        <p>
+                            9:00 PM
+                        </p>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div
+                        class="detail-card">
+
+                        <div
+                            class="detail-icon">
+
+                            ⌖
+
+                        </div>
+
+                        <h3>
+                            VENUE
+                        </h3>
+
+                        <p>
+                            Lavendola<br>
+                            Tiba Rose Hotel<br>
+                            New Cairo
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- MAP -->
+
+                <a
+                    class="map-button"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.google.com/maps/search/?api=1&query=Lavendola%20Tiba%20Rose%20Hotel%20New%20Cairo">
+
+                    OPEN LOCATION
+                    &nbsp; ⌖
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CLOSING -->
+
+        <section
+            class="closing">
+
+            <div
+                class="container">
+
+                <div
+                    class="closing-heart">
+
+                    ♥
+
+                </div>
+
+
+                <h2>
+                    Your Presence
+                    Makes Our Day Complete
+                </h2>
+
+
+                <p>
+                    We can't wait to celebrate
+                    this beautiful moment with you.
+                </p>
+
+
+                <div
+                    class="closing-names">
+
+                    WALID &amp; YASMINE
+
+                </div>
+
+
+                <p>
+                    13 • 09 • 2026
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         MUSIC BUTTON
+         ========================================= -->
+
+    <button
+        class="music-button"
+        id="musicButton"
+        type="button"
+        aria-label="Play music">
+
+        ♫
+
     </button>
 
-  </main>
 
-  <script>
-    function openInvitation() {
-      alert("أهلاً بكم في دعوة وليد وياسمين ❤️");
-    }
-  </script>
 
+    <!-- =========================================
+         JAV
 </body>
 </html>
